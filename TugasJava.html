@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jawa</title>
+    <script type="text/javascript">
+      function disp-prompt() {
+          var name = prompt("please enter your name", "")
+          if (name !=null && name != "") {
+              document.write("Hello " + name + "! How are you today ?")
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="#" method="post" onsubmit="return validasi()">
+      <label class="nama">Nama</label>
+      <input
+        type="text"
+        name="nama"
+        id="nama"
+        placeholder="Masukkan Nama Anda"
+        size="30"
+      /><br /><br />
+      <label class="nama">Email</label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Masukkan Nama Anda"
+        size="30"
+      /><br /><br />
+      <input type="submit" value="kirim" />
+    </form>
+
+    <script>
+      function validasi() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+
+        if (nama == "") {
+          alert("Nama haruss diisi!");
+          return false;
+        }
+        if (email == "") {
+          alert("Email haruss diisi!");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
